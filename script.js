@@ -3,13 +3,14 @@ function clearDisplay() {
 }
 
 function appendToDisplay(value) {
-    document.getElementById('display').value += value;
+    var display = document.getElementById('display');
+    display.value += value;
 }
 
 function calculate() {
     var display = document.getElementById('display');
     try {
-        display.value = eval(display.value);
+        display.value = math.evaluate(display.value);
     } catch (e) {
         display.value = 'Error';
     }
