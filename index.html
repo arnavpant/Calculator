@@ -10,40 +10,41 @@
 </head>
 <body>
     <div class="calculator">
-        <input type="text" id="display" class="display" disabled>
+        <input type="text" id="userDisplay" class="display" disabled>
+        <input type="hidden" id="calcDisplay">
         <div class="main">
             <div class="functions">
-                <button onclick="appendToDisplay('a^2')">a<sup>2</sup></button>
-                <button onclick="appendToDisplay('a^b')">a<sup>b</sup></button>
-                <button onclick="appendToDisplay('|a|')">|a|</button>
-                <button onclick="appendToDisplay('sqrt(')">√</button>
-                <button onclick="appendToDisplay('nthRoot(')">n√</button>
-                <button onclick="appendToDisplay('pi')">π</button>
-                <button onclick="appendToDisplay('sin(')">sin</button>
-                <button onclick="appendToDisplay('cos(')">cos</button>
-                <button onclick="appendToDisplay('tan(')">tan</button>
-                <button onclick="appendToDisplay('(')">(</button>
-                <button onclick="appendToDisplay(')')">)</button>
-                <button onclick="appendToDisplay(',')">,</button>
+                <button onclick="appendToDisplay('^2', '**2')">a<sup>2</sup></button>
+                <button onclick="appendToDisplay('^', '**')">a<sup>b</sup></button>
+                <button onclick="appendToDisplay('|a|', 'abs(a)')">|a|</button>
+                <button onclick="appendToDisplay('√(', 'sqrt(')">√</button>
+                <button onclick="appendToDisplay('n√(', 'nthRoot(')">n√</button>
+                <button onclick="appendToDisplay('π', 'pi')">π</button>
+                <button onclick="appendToDisplay('sin(', 'sin(math.unit(')">sin</button>
+                <button onclick="appendToDisplay('cos(', 'cos(math.unit(')">cos</button>
+                <button onclick="appendToDisplay('tan(', 'tan(math.unit(')">tan</button>
+                <button onclick="appendToDisplay('(', '(')">(</button>
+                <button onclick="appendToDisplay(')', ')')">)</button>
+                <button onclick="appendToDisplay(',', ',')">,</button>
             </div>
             <div class="numbers">
                 <button onclick="clearDisplay()">C</button>
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('+')">+</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('-')">-</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('/')">/</button>
-                <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="appendToDisplay('1', '1')">1</button>
+                <button onclick="appendToDisplay('2', '2')">2</button>
+                <button onclick="appendToDisplay('3', '3')">3</button>
+                <button onclick="appendToDisplay('+', '+')">+</button>
+                <button onclick="appendToDisplay('4', '4')">4</button>
+                <button onclick="appendToDisplay('5', '5')">5</button>
+                <button onclick="appendToDisplay('6', '6')">6</button>
+                <button onclick="appendToDisplay('-', '-')">-</button>
+                <button onclick="appendToDisplay('7', '7')">7</button>
+                <button onclick="appendToDisplay('8', '8')">8</button>
+                <button onclick="appendToDisplay('9', '9')">9</button>
+                <button onclick="appendToDisplay('/', '/')">/</button>
+                <button onclick="appendToDisplay('0', '0')">0</button>
+                <button onclick="appendToDisplay('.', '.')">.</button>
                 <button onclick="saveLastAnswerValue()">Ans</button>
-                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('*', '*')">*</button>
                 <button onclick="calculate()">=</button>
             </div>
         </div>

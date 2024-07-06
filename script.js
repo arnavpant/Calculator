@@ -1,24 +1,33 @@
+let lastResult = '';
+
 function clearDisplay() {
-    document.getElementById('display').value = '';
+    document.getElementById('userDisplay').value = '';
+    document.getElementById('calcDisplay').value = '';
 }
 
-let lastResult = '';
-function appendToDisplay(value) {
-    var display = document.getElementById('display');
-    display.value += value;
+function appendToDisplay(userValue, calcValue) {
+    var userDisplay = document.getElementById('userDisplay');
+    var calcDisplay = document.getElementById('calcDisplay');
+    userDisplay.value += userValue;
+    calcDisplay.value += calcValue;
 }
 
 function calculate() {
-    var display = document.getElementById('display');
+    var userDisplay = document.getElementById('userDisplay');
+    var calcDisplay = document.getElementById('calcDisplay');
     try {
-        display.value = math.evaluate(display.value);
-        lastResult = display.value;
+        // Convert degrees to radians for trigonometric functions
+        const expr = calcDisplay.value.replace(/(sin|cos|tan)\(/g, '$1(math.unit(');
+        userDisplay.value = math.evaluate(expr);
+        lastResult = userDisplay.value;
     } catch (e) {
-        display.value = 'Error';
+        userDisplay.value = 'Error';
     }
 }
 
 function saveLastAnswerValue() {
-    var display = document.getElementById('display');
-    display.value += lastResult;
+    var userDisplay = document.getElementById('userDisplay');
+    var calcDisplay = document.getElementById('calcDisplay');
+    userDisplay.value += lastResult;
+    calcDisplay.value += lastResult;
 }
