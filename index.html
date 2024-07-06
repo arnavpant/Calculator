@@ -16,17 +16,13 @@
             <div class="functions">
                 <button onclick="appendToDisplay('²', '^2')">a<sup>2</sup></button>
                 <button onclick="appendToDisplay('^', '^')">a<sup>b</sup></button>
-                <!-- absolute value button currently disabled-->
-                <button onclick="appendToDisplay('|a|', 'abs(a)')" disabled>|a|</button>
                 <button onclick="appendToDisplay('√(', 'sqrt(')">√</button>
-                <button onclick="appendToDisplay('n√(', 'nthRoot(')">n√</button>
                 <button onclick="appendToDisplay('π', 'pi')">π</button>
                 <button onclick="appendToDisplay('sin(', 'sin(math.unit(')">sin</button>
                 <button onclick="appendToDisplay('cos(', 'cos(math.unit(')">cos</button>
                 <button onclick="appendToDisplay('tan(', 'tan(math.unit(')">tan</button>
                 <button onclick="appendToDisplay('(', '(')">(</button>
                 <button onclick="appendToDisplay(')', ')')">)</button>
-                <button onclick="appendToDisplay(',', ',')">,</button>
             </div>
             <div class="numbers">
                 <button onclick="clearDisplay()">C</button>
@@ -44,7 +40,7 @@
                 <button onclick="appendToDisplay('/', '/')">/</button>
                 <button onclick="appendToDisplay('0', '0')">0</button>
                 <button onclick="appendToDisplay('.', '.')">.</button>
-                <button onclick="saveLastAnswerValue()">Ans</button>
+                <button onclick="saveLastAnswerValue()">ans</button>
                 <button onclick="appendToDisplay('•', '*')">*</button>
                 <button onclick="calculate()">=</button>
             </div>
