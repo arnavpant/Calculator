@@ -14,9 +14,10 @@
         <input type="hidden" id="calcDisplay">
         <div class="main">
             <div class="functions">
-                <button onclick="appendToDisplay('^2', '**2')">a<sup>2</sup></button>
-                <button onclick="appendToDisplay('^', '**')">a<sup>b</sup></button>
-                <button onclick="appendToDisplay('|a|', 'abs(a)')">|a|</button>
+                <button onclick="appendToDisplay('²', '^2')">a<sup>2</sup></button>
+                <button onclick="appendToDisplay('^', '^')">a<sup>b</sup></button>
+                <!-- absolute value button currently disabled-->
+                <button onclick="appendToDisplay('|a|', 'abs(a)')" disabled>|a|</button>
                 <button onclick="appendToDisplay('√(', 'sqrt(')">√</button>
                 <button onclick="appendToDisplay('n√(', 'nthRoot(')">n√</button>
                 <button onclick="appendToDisplay('π', 'pi')">π</button>
@@ -44,7 +45,7 @@
                 <button onclick="appendToDisplay('0', '0')">0</button>
                 <button onclick="appendToDisplay('.', '.')">.</button>
                 <button onclick="saveLastAnswerValue()">Ans</button>
-                <button onclick="appendToDisplay('*', '*')">*</button>
+                <button onclick="appendToDisplay('•', '*')">*</button>
                 <button onclick="calculate()">=</button>
             </div>
         </div>
