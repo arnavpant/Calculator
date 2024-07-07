@@ -18,7 +18,7 @@ function calculateResult() {
     let display = document.getElementById('display');
     let expression = display.innerText;
     try {
-        let result = eval(expression.replace(/π/g, 'Math.PI').replace(/sqrt/g, 'Math.sqrt').replace(/log/g, 'Math.log10').replace(/sin/g, 'Math.sin').replace(/cos/g, 'Math.cos').replace(/tan/g, 'Math.tan').replace(/abs/g, 'Math.abs').replace(/!/g, 'factorial'));
+        let result = eval(expression.replace(/Math.PI/g, 'Math.PI').replace(/Math.sqrt/g, 'Math.sqrt').replace(/Math.log10/g, 'Math.log10').replace(/Math.sin/g, 'Math.sin').replace(/Math.cos/g, 'Math.cos').replace(/Math.tan/g, 'Math.tan').replace(/Math.abs/g, 'Math.abs').replace(/!/g, 'factorial'));
         display.innerText = result;
         history.push({ expression: expression, result: result });
     } catch (error) {
@@ -33,8 +33,8 @@ function factorial(n) {
 function showHistory() {
     let historyPage = document.getElementById('historyPage');
     let calculatorPage = document.getElementById('calculatorPage');
-    historyPage.style.display = 'block';
-    calculatorPage.style.display = 'none';
+    historyPage.classList.add('active');
+    calculatorPage.classList.remove('active');
 
     let historyDiv = document.getElementById('history');
     historyDiv.innerHTML = '';
@@ -48,6 +48,6 @@ function showHistory() {
 function showCalculator() {
     let historyPage = document.getElementById('historyPage');
     let calculatorPage = document.getElementById('calculatorPage');
-    historyPage.style.display = 'none';
-    calculatorPage.style.display = 'block';
+    historyPage.classList.remove('active');
+    calculatorPage.classList.add('active');
 }
