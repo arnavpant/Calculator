@@ -34,10 +34,15 @@ body {
     border-radius: 5px;
 }
 
-.buttons {
+.calculator-container {
+    display: flex;
+}
+
+.basic-buttons, .advanced-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-right: 10px;
 }
 
 button {
